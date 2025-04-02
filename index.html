@@ -10,11 +10,34 @@
 		<div class="page_wrap">
 			<header class="header">
 				<div class="header_top">
-					<h1 class="logo">로고</h1>
+					<h1 class="logo">
+						<a href="./" title="에어비엔비 홈으로 바로가기">
+							<img src="./images/로고" alt="에어비엔비 로고" />
+						</a>
+					</h1>
 					<div class="user_area">
-						<a href="#none" class="link_goto_start">에어비엔비 시작하기</a>
+						<a href="#none" class="link_goto_start" title="에어비엔비 스타트 페이지로 이동">당신의 공간을 에어비앤비하세요</a>
 						<button class="btn_translate">언어 변경</button>
-						<button class="btn_user">사용자 메뉴</button>
+						<div class="user_menu_area">
+							<button class="btn_user">사용자 메뉴</button>
+							<div class="user_menu_wrap">
+								<ul class="user_menu_list">
+									<li><button>회원가입</button></li>
+									<li><button>로그인</button></li>
+								</ul>
+								<ul class="user_menu_list">
+									<li>
+										<a href="https://www.airbnb.co.kr/host/homes" title="에어비엔비 스타트 페이지로 이동">당신의 공간을 에어비앤비하세요</a>
+									</li>
+									<li>
+										<a href="https://www.airbnb.co.kr/host/experiences?from_nav=1" title="체험 호스팅 안내 페이지로 이동">체험 호스팅하기</a>
+									</li>
+									<li>
+										<a href="https://www.airbnb.co.kr/help" title="도움말 페이지로 이동">도움말 센터</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="search_wrap">
@@ -22,7 +45,21 @@
 						<div class="search_item_tit">여행지</div>
 						<div class="search_item_desc">여행지 검색</div>
 					</div>
-					<div class="line_vertical"></div>
+					<hr class="line_vertical" />
+					<div class="search_item">
+						<div class="search_item_tit">체크인</div>
+						<div class="search_item_desc">날짜 추가</div>
+					</div>
+					<hr class="line_vertical" />
+					<div class="search_item">
+						<div class="search_item_tit">체크아웃</div>
+						<div class="search_item_desc">날짜 추가</div>
+					</div>
+					<hr class="line_vertical" />
+					<div class="search_item">
+						<div class="search_item_tit">여행자</div>
+						<div class="search_item_desc">게스트 추가</div>
+					</div>
 					<button class="btn_search">검색</button>
 				</div>
 			</header>
@@ -31,8 +68,24 @@
 					<div class="main_tab_list_view">
 						<ul class="main_tab_menu_list">
 							<li class="tab_menu_item">
-								<div class="tab_menu_icon"></div>
-								<div class="tab_menu_tit"></div>
+								<div class="tab_menu_icon"><img src="./images/탭 아이콘" alt="" /></div>
+								<div class="tab_menu_tit">한옥</div>
+							</li>
+							<li class="tab_menu_item">
+								<div class="tab_menu_icon"><img src="./images/탭 아이콘" alt="" /></div>
+								<div class="tab_menu_tit">멋진 수영장</div>
+							</li>
+							<li class="tab_menu_item">
+								<div class="tab_menu_icon"><img src="./images/탭 아이콘" alt="" /></div>
+								<div class="tab_menu_tit">해변 바로 앞</div>
+							</li>
+							<li class="tab_menu_item">
+								<div class="tab_menu_icon"><img src="./images/탭 아이콘" alt="" /></div>
+								<div class="tab_menu_tit">창작 공간</div>
+							</li>
+							<li class="tab_menu_item">
+								<div class="tab_menu_icon"><img src="./images/탭 아이콘" alt="" /></div>
+								<div class="tab_menu_tit">한적한 시골</div>
 							</li>
 						</ul>
 					</div>
@@ -40,34 +93,106 @@
 				</div>
 				<div class="main_contents_area">
 					<ul class="main_contents_list">
-						<li class="main_content">
-							<div class="tnumbnail_area">
-								<div class="">이미지 영역</div>
-								<div class="">아이콘 영역</div>
+						<li class="main_content_item">
+							<div class="main_content_tnumbnail_area">
+								<div class="main_content_item_images">이미지 영역</div>
+								<div class="main_content_item_buttons">
+									<div class="top">
+										<div class="guest_favorite">게스트 선호</div>
+										<button class="btn_like">좋아요</button>
+									</div>
+									<div class="main_content_item_navi">
+										<button class="btn_prev">이전</button>
+										<button class="btn_next">다음</button>
+									</div>
+									<div class="main_content_item_pagination"></div>
+								</div>
 							</div>
-							<div class="thumbnail_info"></div>
+							<div class="main_content_thumbnail_info">
+								<dl>
+									<dt class="item_tit">한국 가평군</dt>
+									<dd class="item_distance">44km거리</dd>
+									<dd class="item_date">4월 20일 ~25일</dd>
+									<dd class="item_date">₩395,766&#47;박</dd>
+									<dd class="item_score">4.45</dd>
+								</dl>
+							</div>
 						</li>
 					</ul>
 					<div class="view_more">
-						<div class="desc_view_more"></div>
-						<div class="btn_view_more"></div>
+						<div class="desc_view_more"><span class="now_tab_menu_tit">한옥</span> 숙소 카테고리 계속 검색하기</div>
+						<div class="btn_view_more">더 보기</div>
 					</div>
 				</div>
 			</main>
 			<footer class="footer">
 				<div class="footer_top_area">
-					<div class="footer_top_tit"></div>
+					<div class="footer_top_tit">다음 여행을 위한 추천 여행지</div>
 					<div class="footer_top_tab_wrap">
-						<div class="footer_top_tab_menu"></div>
-						<div class="footer_top_tab_content"></div>
+						<div class="footer_top_tab_menu">
+							<ul class="footer_top_tabs">
+								<li class="footer_top_tab_item" data-value="best">인기</li>
+								<li class="footer_top_tab_item" data-value="categories">카테고리</li>
+							</ul>
+						</div>
+						<div class="footer_top_tab_content_wrap">
+							<div class="footer_top_tab_content" data-value="best">
+								<ul class="best_recommend_list">
+									<li class="best_recommend_list_item">
+										<a href="">
+											<span class="name">캔모어</span>
+											<span class="type">아파트 숙소</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="footer_bottom_area">
-					<div class="footer_bottom_links"></div>
+					<div class="footer_bottom_links">
+						<div class="column">
+							<div class=""><a href="">에어비앤비 지원</a></div>
+							<div class=""><a href="">도움말 센터</a></div>
+						</div>
+						<div class="column">
+							<div class=""><a href="">호스팅</a></div>
+							<div class=""><a href="">당신의 공간을 에어비앤비하세요</a></div>
+						</div>
+						<div class="column">
+							<div class=""><a href="">에어비앤비</a></div>
+							<div class=""><a href="">뉴스룸</a></div>
+						</div>
+					</div>
 					<div class="footer_bottom_info_area">
-						<div class="footer_bottom_info"></div>
-						<div class="line_horizontal"></div>
-						<div class="copyright_desc"></div>
+						<div class="footer_bottom_info">
+							<span class="info_desc">© 2025 Airbnb, Inc.</span>
+							<span class="dot">·</span>
+							<a href="" class="footer_bottom_link">개인정보 처리방침</a>
+							<span class="dot">·</span>
+							<a href="" class="footer_bottom_link">쿠키 정책</a>
+							<span class="dot">·</span>
+							<a href="" class="footer_bottom_link">이용약관</a>
+							<span class="dot">·</span>
+							<a href="" class="footer_bottom_link">사이트맵</a>
+							<span class="dot">·</span>
+							<a href="" class="footer_bottom_link">한국의 변경된 환불 정책</a>
+							<span class="dot">·</span>
+							<a href="" class="footer_bottom_link">회사 세부정보</a>
+						</div>
+						<button class="btn_translate">언어 변경</button>
+						<div class="sns_btns">
+							<button class="btn_sns facebook">facebook</button>
+							<button class="btn_sns x">x</button>
+							<button class="btn_sns instagram">instagram</button>
+							<button class="btn_sns naverblog">naverblog</button>
+							<button class="btn_sns naverpost">naverpost</button>
+						</div>
+						<hr class="line_horizontal" />
+						<p class="copyright_desc">
+							웹사이트 제공자: Airbnb Ireland UC, private unlimited company, 8 Hanover Quay Dublin 2, D02 DP23 Ireland | 이사: Dermot Clarke, Killian Pattwell, Andrea Finnegan | VAT 번호: IE9827384L | 사업자 등록 번호: IE 511825 | 연락처: terms@airbnb.com, 웹사이트, 080-822-0230 | 호스팅 서비스
+							제공업체: 아마존 웹서비스 | 에어비앤비는 통신판매 중개자로 에어비앤비 플랫폼을 통하여 게스트와 호스트 사이에 이루어지는 통신판매의 당사자가 아닙니다. 에어비앤비 플랫폼을 통하여 예약된 숙소, 체험, 호스트 서비스에 관한 의무와 책임은 해당 서비스를 제공하는 호스트에게 있습니다.
+						</p>
 					</div>
 				</div>
 			</footer>
