@@ -13,6 +13,12 @@
 	--border-color: #dddddd;
 	/* font */
 	--font-family: "Noto Sans KR", sans-serif;
+	--fs-title: 22px;
+	--fs-semi-title: 18px;
+	--fs-normal-em: 15px;
+	--fs-normal: 14px;
+	--fs-caption: 12px;
+	--fs-caption-sm: 10px;
 	--fw-400: 400;
 	--fw-500: 500;
 	/* line-height */
