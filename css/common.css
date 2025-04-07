@@ -22,6 +22,8 @@
 	--fs-caption-sm: 10px;
 	--fw-400: 400;
 	--fw-500: 500;
+	--fw-normal: var(--fw-400);
+	--fw-medium: var(--fw-500);
 	/* line-height */
 	--lh-normal: 1.1875rem;
 }
@@ -31,11 +33,11 @@ body {
 	font-optical-sizing: auto;
 	font-style: normal;
 	font-size: var(--fs-normal);
-	font-weight: var(--fw-400);
+	font-weight: var(--fw-normal);
 	color: var(--main-color);
 }
 a {
-	font-weight: var(--fw-500);
+	font-weight: var(--fw-medium);
 	color: var(--main-color);
 	text-decoration: none;
 }
@@ -155,12 +157,12 @@ header {
 }
 .search_item_tit {
 	font-size: var(--fs-caption);
-	font-weight: var(--fw-500);
+	font-weight: var(--fw-medium);
 	color: var(--main-color);
 	margin-bottom: 2px;
 }
 .search_item_desc {
-	font-weight: var(--fw-500);
+	font-weight: var(--fw-medium);
 	color: var(--sub-color);
 }
 .line_vertical {
@@ -210,4 +212,83 @@ header {
 	width: 32px;
 	height: 32px;
 	margin-right: 0;
+}
+
+/* ----------------------- main ----------------------- */
+/* main - tab */
+/* tab menu */
+.main_tab_area {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 40px;
+}
+.main_tab_menu_list {
+	display: flex;
+	padding-top: 16px;
+}
+.tab_menu_item {
+	margin: 16px 16px 0px 16px;
+	opacity: 0.674;
+}
+.tab_menu_item:first-child {
+	margin-left: 0;
+}
+.tab_menu_icon {
+	width: 24px;
+	height: 24px;
+	margin: 0 auto;
+	background-image: url("./../images/sprite.png");
+	background-repeat: no-repeat;
+}
+.tab_menu_icon.hanok {
+	background-position: 0px -106px;
+}
+.tab_menu_icon.pool {
+	background-position: -24px -106px;
+}
+.tab_menu_icon.coast {
+	background-position: -48px -106px;
+}
+.tab_menu_icon.creative {
+	background-position: -72px -106px;
+}
+.tab_menu_icon.country {
+	background-position: -96px -106px;
+}
+.tab_menu_tit {
+	padding-bottom: 14px;
+	margin-top: 8px;
+	font-size: var(--fs-caption);
+	font-weight: var(--fw-medium);
+}
+.tab_menu_item.selected {
+	opacity: 1;
+}
+.tab_menu_item.selected .tab_menu_tit {
+	border-bottom: solid 2px var(--main-color);
+}
+/* button filter */
+.btn_filter {
+	display: flex;
+	align-items: center;
+	height: 32px;
+	padding: 7px 16px;
+	border-radius: 12px;
+	border: 1px solid var(--border-color);
+	background: var(--white);
+	box-sizing: content-box;
+}
+.btn_filter:hover {
+	border: 1px solid var(--main-color);
+	background: var(--background-color);
+}
+.icon_filter {
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+	background-image: url("./../images/sprite.png");
+	background-repeat: no-repeat;
+	background-position: -64px -48px;
 }
