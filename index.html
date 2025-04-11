@@ -385,10 +385,10 @@
 				<div class="footer_top_area">
 					<div class="footer_top_tit">다음 여행을 위한 추천 여행지</div>
 					<div class="footer_top_tab_wrap">
-						<div class="footer_top_tab_menu">
-							<ul class="footer_top_tabs">
-								<li class="footer_top_tab_item selected" data-value="best">인기</li>
-								<li class="footer_top_tab_item" data-value="categories">카테고리</li>
+						<div class="footer_top_tab tab_menu">
+							<ul class="tab_items_list">
+								<li class="tab_item selected" data-value="best">인기</li>
+								<li class="tab_item" data-value="categories">카테고리</li>
 							</ul>
 						</div>
 						<div class="footer_top_tab_content_wrap">
@@ -501,16 +501,405 @@
 
 		<!-- start: popup_wrap -->
 		<div class="popup_wrap">
-			<div class="popup">
+			<!-- 팝업: 언어변경 -->
+			<div class="popup translate">
 				<div class="popup_header">
 					<button class="btn_close"><span class="icon_close"></span>닫기</button>
-					<h1>팝업제목</h1>
 				</div>
 				<div class="popup_main">
-					<div class="popup_main_content"></div>
-					<div class="popup_main_fold"></div>
+					<div class="popup_tab_wrap">
+						<div class="popup_tab tab_menu">
+							<ul class="tab_items_list">
+								<li class="tab_item selected" data-value="language_region">언어와 지역</li>
+							</ul>
+						</div>
+						<div class="popup_tab_content_wrap">
+							<!-- 언어와 지역 -->
+							<div class="popup_tab_content" data-value="language_region">
+								<div class="popup_main_content">
+									<div class="translate_toggle_box">
+										<dl class="translate_toggle_desc">
+											<dt class="tit">번역</dt>
+											<dd class="desc">설명과 후기가 한국어로 자동 번역됩니다.</dd>
+										</dl>
+										<button class="btn_translate_toggle">자동 번역 토글<span class="toggle_circle"></span></button>
+									</div>
+								</div>
+								<div class="popup_main_content">
+									<h2 class="popup_main_content_tit">추천 언어 및 지역</h2>
+									<ul class="languages_list">
+										<li class="languages_list_item selected">
+											<a href="" class="inner_link selected">English<span class="country">United States</span></a>
+										</li>
+										<li class="languages_list_item">
+											<a href="" class="inner_link">English<span class="country">United Kingdom</span></a>
+										</li>
+									</ul>
+								</div>
+								<div class="popup_main_content">
+									<h2 class="popup_main_content_tit">언어와 지역을 선택하세요</h2>
+									<ul class="languages_list">
+										<li class="languages_list_item">
+											<a href="" class="inner_link selected">한국어<span class="country">대한민국</span></a>
+										</li>
+										<li class="languages_list_item">
+											<a href="" class="inner_link">English<span class="country">United States</span></a>
+										</li>
+										<li class="languages_list_item">
+											<a href="" class="inner_link">English<span class="country">United Kingdom</span></a>
+										</li>
+										<li class="languages_list_item">
+											<a href="" class="inner_link">日本語<span class="country">日本</span></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="popup_footer"></div>
+			</div>
+			<!-- 팝업: 필터 -->
+			<div class="popup filter">
+				<div class="popup_header">
+					<h1 class="popup_tit">필터</h1>
+					<button class="btn_close"><span class="icon_close"></span>닫기</button>
+				</div>
+				<div class="popup_main">
+					<div class="popup_main_content">
+						<h2 class="popup_main_content_tit">숙소 유형</h2>
+						<ul class="placetype_select_list">
+							<li class="placetype_select_item selected">모든 유형</li>
+							<li class="placetype_select_item">방</li>
+							<li class="placetype_select_item">집 전체</li>
+						</ul>
+					</div>
+					<div class="popup_main_content">
+						<h2 class="popup_main_content_tit">침실과 침대</h2>
+						<ul class="counter_list">
+							<li class="counter_list_item">
+								<div class="counter_list_item_tit">침실</div>
+								<div class="counter_list_item_counter">
+									<button class="btn_count minus">
+										빼기
+										<span class="btn_count_icon icon_minus">
+											<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 12px; width: 12px; fill: currentcolor">
+												<path d="m.75 6.75h10.5v-1.5h-10.5z"></path>
+											</svg>
+										</span>
+									</button>
+									<span class="count">상관없음</span>
+									<button class="btn_count plus">
+										더하기
+										<span class="btn_count_icon icon_plus">
+											<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 12px; width: 12px; fill: currentcolor">
+												<path d="m6.75.75v4.5h4.5v1.5h-4.5v4.5h-1.5v-4.5h-4.5v-1.5h4.5v-4.5z"></path>
+											</svg>
+										</span>
+									</button>
+								</div>
+							</li>
+							<li class="counter_list_item">
+								<div class="counter_list_item_tit">침대</div>
+								<div class="counter_list_item_counter">
+									<button class="btn_count minus">
+										빼기
+										<span class="btn_count_icon icon_minus">
+											<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 12px; width: 12px; fill: currentcolor">
+												<path d="m.75 6.75h10.5v-1.5h-10.5z"></path>
+											</svg>
+										</span>
+									</button>
+									<span class="count">상관없음</span>
+									<button class="btn_count plus">
+										더하기
+										<span class="btn_count_icon icon_plus">
+											<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 12px; width: 12px; fill: currentcolor">
+												<path d="m6.75.75v4.5h4.5v1.5h-4.5v4.5h-1.5v-4.5h-4.5v-1.5h4.5v-4.5z"></path>
+											</svg>
+										</span>
+									</button>
+								</div>
+							</li>
+							<li class="counter_list_item">
+								<div class="counter_list_item_tit">욕실</div>
+								<div class="counter_list_item_counter">
+									<button class="btn_count minus">
+										빼기
+										<span class="btn_count_icon icon_minus">
+											<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 12px; width: 12px; fill: currentcolor">
+												<path d="m.75 6.75h10.5v-1.5h-10.5z"></path>
+											</svg>
+										</span>
+									</button>
+									<span class="count">상관없음</span>
+									<button class="btn_count plus">
+										더하기
+										<span class="btn_count_icon icon_plus">
+											<svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 12px; width: 12px; fill: currentcolor">
+												<path d="m6.75.75v4.5h4.5v1.5h-4.5v4.5h-1.5v-4.5h-4.5v-1.5h4.5v-4.5z"></path>
+											</svg>
+										</span>
+									</button>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="popup_main_content">
+						<h2 class="popup_main_content_tit">편의시설</h2>
+						<div class="tags_wrap">
+							<h3 class="tags_wrap_tit">필수</h3>
+							<div class="tags">
+								<button class="tag_item"><span class="icon_tag wifi"></span><span class="tag_name">와이파이</span></button>
+								<button class="tag_item"><span class="icon_tag kitchen"></span><span class="tag_name">주방</span></button>
+								<button class="tag_item"><span class="icon_tag laundry"></span><span class="tag_name">세탁기</span></button>
+								<button class="tag_item"><span class="icon_tag dryer"></span><span class="tag_name">건조기</span></button>
+								<button class="tag_item"><span class="icon_tag airconditioner"></span><span class="tag_name">에어컨</span></button>
+								<button class="tag_item"><span class="icon_tag warmer"></span><span class="tag_name">난방</span></button>
+								<button class="tag_item"><span class="icon_tag workplace"></span><span class="tag_name">업무 전용 공간</span></button>
+								<button class="tag_item"><span class="icon_tag tv"></span><span class="tag_name">TV</span></button>
+								<button class="tag_item"><span class="icon_tag hairdryer"></span><span class="tag_name">헤어드라이어</span></button>
+								<button class="tag_item"><span class="icon_tag iron"></span><span class="tag_name">다리미</span></button>
+							</div>
+						</div>
+						<div class="tags_wrap">
+							<h3 class="tags_wrap_tit">위치</h3>
+							<div class="tags">
+								<button class="tag_item"><span class="icon_tag coast"></span><span class="tag_name">해변</span></button>
+								<button class="tag_item"><span class="icon_tag waterside"></span><span class="tag_name">수변</span></button>
+							</div>
+						</div>
+						<div class="tags_wrap">
+							<h3 class="tags_wrap_tit">안전</h3>
+							<div class="tags">
+								<button class="tag_item"><span class="icon_tag firealarm"></span><span class="tag_name">화재경보기</span></button>
+								<button class="tag_item"><span class="icon_tag co1alarm"></span><span class="tag_name">일산화탄소 경보기</span></button>
+							</div>
+						</div>
+					</div>
+					<div class="popup_main_content">
+						<h2 class="popup_main_content_tit">예약옵션</h2>
+						<div class="tags_wrap">
+							<div class="tags">
+								<button class="tag_item"><span class="icon_tag now"></span><span class="tag_name">즉시 예약</span></button>
+								<button class="tag_item"><span class="icon_tag selfcheckin"></span><span class="tag_name">셀프 체크인</span></button>
+								<button class="tag_item"><span class="icon_tag pet"></span><span class="tag_name">반려동물 동반 가능</span></button>
+							</div>
+						</div>
+					</div>
+					<div class="popup_main_content">
+						<h2 class="popup_main_content_tit">돋보이는 숙소</h2>
+						<button class="btn_guests_popular">
+							<span class="icon_guest_popular"></span>
+							<span class="guest_popular_info">
+								<span class="tit">게스트 선호</span>
+								<span class="desc">에어비앤비에서 가장 사랑받는 숙소를 소개합니다.</span>
+							</span>
+						</button>
+					</div>
+					<div class="popup_fold">
+						<div class="popup_fold_inner">
+							<div class="popup_fold_head">
+								<h2 class="popup_fold_head_tit">접근성 편의</h2>
+								<button class="btn_fold_toggle">접기 펼치기 버튼</button>
+							</div>
+							<div class="popup_fold_body">
+								<div class="fold_checklist_wrap">
+									<h3 class="fold_checklist_tit">게스트 출입구 및 주차장</h3>
+									<ul class="fold_checklist">
+										<li class="fold_check_item">
+											<label class="check_item_lable" for="filterCheckNoStair">
+												<div class="check_item_input_wrap">
+													<input type="checkbox" id="filterCheckNoStair" class="input_checkbox" />
+													<span class="check_item_custominput"><span class="icon_check"></span></span>
+												</div>
+												<span class="label_name">계단 없이 출입 가능</span>
+											</label>
+										</li>
+										<li class="fold_check_item">
+											<label class="check_item_lable" for="filterCheckDpParking">
+												<div class="check_item_input_wrap">
+													<input type="checkbox" id="filterCheckDpParking" class="input_checkbox" />
+													<span class="check_item_custominput"><span class="icon_check"></span></span>
+												</div>
+												<span class="label_name">장애인용 주차 공간</span>
+											</label>
+										</li>
+										<li class="fold_check_item">
+											<label class="check_item_lable" for="filterCheckWideDoor">
+												<div class="check_item_input_wrap">
+													<input type="checkbox" id="filterCheckWideDoor" class="input_checkbox" />
+													<span class="check_item_custominput"><span class="icon_check"></span></span>
+												</div>
+												<span class="label_name">너비 81cm 이상의 게스트 출입구</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="fold_checklist_wrap">
+									<h3 class="fold_checklist_tit">침실</h3>
+									<ul class="fold_checklist">
+										<li class="fold_check_item">
+											<label class="check_item_lable" for="filterCheckNoStairBed">
+												<div class="check_item_input_wrap">
+													<input type="checkbox" id="filterCheckNoStairBed" class="input_checkbox" />
+													<span class="check_item_custominput"><span class="icon_check"></span></span>
+												</div>
+												<span class="label_name">계단이나 문턱 없는 침실</span>
+											</label>
+										</li>
+										<li class="fold_check_item">
+											<label class="check_item_lable" for="filterCheckWideBedDoor">
+												<div class="check_item_input_wrap">
+													<input type="checkbox" id="filterCheckWideBedDoor" class="input_checkbox" />
+													<span class="check_item_custominput"><span class="icon_check"></span></span>
+												</div>
+												<span class="label_name">너비 81cm 이상의 침실 출입구</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="fold_checklist_wrap">
+									<h3 class="fold_checklist_tit">욕실</h3>
+									<ul class="fold_checklist">
+										<li class="fold_check_item">
+											<label class="check_item_lable" for="filterCheckNoStairBath">
+												<div class="check_item_input_wrap">
+													<input type="checkbox" id="filterCheckNoStairBath" class="input_checkbox" />
+													<span class="check_item_custominput"><span class="icon_check"></span></span>
+												</div>
+												<span class="label_name">계단이나 문턱 없는 욕실</span>
+											</label>
+										</li>
+										<li class="fold_check_item">
+											<label class="check_item_lable" for="filterCheckWideBathDoor">
+												<div class="check_item_input_wrap">
+													<input type="checkbox" id="filterCheckWideBathDoor" class="input_checkbox" />
+													<span class="check_item_custominput"><span class="icon_check"></span></span>
+												</div>
+												<span class="label_name">너비 81cm 이상의 게스트 출입구</span>
+											</label>
+										</li>
+										<li class="fold_check_item">
+											<label class="check_item_lable" for="filterCheckToiletHandle">
+												<div class="check_item_input_wrap">
+													<input type="checkbox" id="filterCheckToiletHandle" class="input_checkbox" />
+													<span class="check_item_custominput"><span class="icon_check"></span></span>
+												</div>
+												<span class="label_name">변기 옆 고정 손잡이</span>
+											</label>
+										</li>
+										<li class="fold_check_item">
+											<label class="check_item_lable" for="filterCheckShowerHandle">
+												<div class="check_item_input_wrap">
+													<input type="checkbox" id="filterCheckShowerHandle" class="input_checkbox" />
+													<span class="check_item_custominput"><span class="icon_check"></span></span>
+												</div>
+												<span class="label_name">샤워실 고정 손잡이</span>
+											</label>
+										</li>
+										<li class="fold_check_item">
+											<label class="check_item_lable" for="filterCheckNoStairShower">
+												<div class="check_item_input_wrap">
+													<input type="checkbox" id="filterCheckNoStairShower" class="input_checkbox" />
+													<span class="check_item_custominput"><span class="icon_check"></span></span>
+												</div>
+												<span class="label_name">계단이나 문턱 없는 샤워실</span>
+											</label>
+										</li>
+										<li class="fold_check_item">
+											<label class="check_item_lable" for="filterCheckBathChair">
+												<div class="check_item_input_wrap">
+													<input type="checkbox" id="filterCheckBathChair" class="input_checkbox" />
+													<span class="check_item_custominput"><span class="icon_check"></span></span>
+												</div>
+												<span class="label_name">샤워/목욕 의자</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+								<div class="fold_checklist_wrap">
+									<h3 class="fold_checklist_tit">장애인용 보조 장치</h3>
+									<ul class="fold_checklist">
+										<li class="fold_check_item">
+											<label class="check_item_lable" for="filterCheckLift">
+												<div class="check_item_input_wrap">
+													<input type="checkbox" id="filterCheckLift" class="input_checkbox" />
+													<span class="check_item_custominput"><span class="icon_check"></span></span>
+												</div>
+												<span class="label_name">천장형 또는 이동식 리프트</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="popup_fold">
+						<div class="popup_fold_inner">
+							<div class="popup_fold_head">
+								<h2 class="popup_fold_head_tit">호스트 언어</h2>
+								<button class="btn_fold_toggle">접기 펼치기 버튼</button>
+							</div>
+							<div class="popup_fold_body">
+								<div class="fold_checklist_wrap">
+									<ul class="fold_checklist column2">
+										<li class="fold_check_item">
+											<label class="check_item_lable" for="filterCheckHostKOR">
+												<div class="check_item_input_wrap">
+													<input type="checkbox" id="filterCheckHostKOR" class="input_checkbox" />
+													<span class="check_item_custominput"><span class="icon_check"></span></span>
+												</div>
+												<span class="label_name">한국어</span>
+											</label>
+										</li>
+										<li class="fold_check_item">
+											<label class="check_item_lable" for="filterCheckHostENG">
+												<div class="check_item_input_wrap">
+													<input type="checkbox" id="filterCheckHostENG" class="input_checkbox" />
+													<span class="check_item_custominput"><span class="icon_check"></span></span>
+												</div>
+												<span class="label_name">영어</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="popup_footer">
+					<button class="btn_all_cancel">전체 해제</button>
+					<button class="btn_result">숙소 <span class="btn_result_number">181</span>개 보기</button>
+				</div>
+			</div>
+			<!-- 팝업: 로그인 및 회원가입 -->
+			<div class="popup loginSignUp">
+				<div class="popup_header">
+					<h1 class="popup_tit">로그인 또는 회원 가입</h1>
+					<button class="btn_close"><span class="icon_close"></span>닫기</button>
+				</div>
+				<div class="popup_main">
+					<h2 class="popup_main_content_tit">에어비앤비에 오신 것을 환영합니다.</h2>
+					<div class="input_telephone_wrap">
+						<div class="select_wrap">
+							<select>
+								<option>한국</option>
+								<option>미국</option>
+							</select>
+						</div>
+						<input type="" placeholder="전화번호" />
+					</div>
+					<p class="contact_desc">전화나 문자로 전화번호를 확인하겠습니다. 일반 문자 메시지 요금 및 데이터 요금이 부과됩니다. <a href="" class="link_term_privacy">개인정보 처리방침</a></p>
+					<button class="btn_continue">계속</button>
+					<div class="line_or">또는</div>
+					<div class="btns_sns_login">
+						<button class="btn_sns naver"><span class="icon_sns naver"></span><span class="btn_sns_desc">네이버로 로그인하기</span></button>
+						<button class="btn_sns google"><span class="icon_sns google"></span><span class="btn_sns_desc">구글로 로그인하기</span></button>
+						<button class="btn_sns apple"><span class="icon_sns apple"></span><span class="btn_sns_desc">애플로 로그인하기</span></button>
+						<button class="btn_sns email"><span class="icon_sns email"></span><span class="btn_sns_desc">이메일로 로그인하기</span></button>
+						<button class="btn_sns facebook"><span class="icon_sns facebook"></span><span class="btn_sns_desc">페이스북으로 로그인하기</span></button>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- end: popup_wrap -->
