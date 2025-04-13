@@ -33,20 +33,22 @@
 								<span class="icon_menu"></span>
 								<span class="icon_user"></span>
 							</button>
+							<div class="user_menu_dim"></div>
 							<div class="user_menu_wrap">
 								<ul class="user_menu_list">
-									<li><button>회원가입</button></li>
-									<li><button>로그인</button></li>
+									<li class="user_menu_list_item"><button class="btn_loginSignUp">회원가입</button></li>
+									<li class="user_menu_list_item"><button class="btn_loginSignUp">로그인</button></li>
 								</ul>
+								<hr class="line_horizontal" />
 								<ul class="user_menu_list">
-									<li>
-										<a href="https://www.airbnb.co.kr/host/homes" title="에어비엔비 스타트 페이지로 이동">당신의 공간을 에어비앤비하세요</a>
+									<li class="user_menu_list_item">
+										<a href="https://www.airbnb.co.kr/host/homes" title="에어비엔비 스타트 페이지로 이동" class="link_user_menu">당신의 공간을 에어비앤비하세요</a>
 									</li>
-									<li>
-										<a href="https://www.airbnb.co.kr/host/experiences?from_nav=1" title="체험 호스팅 안내 페이지로 이동">체험 호스팅하기</a>
+									<li class="user_menu_list_item">
+										<a href="https://www.airbnb.co.kr/host/experiences?from_nav=1" title="체험 호스팅 안내 페이지로 이동" class="link_user_menu">체험 호스팅하기</a>
 									</li>
-									<li>
-										<a href="https://www.airbnb.co.kr/help" title="도움말 페이지로 이동">도움말 센터</a>
+									<li class="user_menu_list_item">
+										<a href="https://www.airbnb.co.kr/help" title="도움말 페이지로 이동" class="link_user_menu">도움말 센터</a>
 									</li>
 								</ul>
 							</div>
@@ -502,7 +504,7 @@
 		<!-- end: page_wrap -->
 
 		<!-- start: popup_wrap -->
-		<div class="popup_wrap">
+		<div class="popup_wrap translate">
 			<!-- 팝업: 언어변경 -->
 			<div class="popup translate">
 				<div class="popup_header">
@@ -560,7 +562,9 @@
 					</div>
 				</div>
 			</div>
-			<!-- 팝업: 필터 -->
+		</div>
+		<!-- 팝업: 필터 -->
+		<div class="popup_wrap filter">
 			<div class="popup filter">
 				<div class="popup_header">
 					<h1 class="popup_tit">필터</h1>
@@ -874,7 +878,9 @@
 					<button class="btn_result">숙소 <span class="btn_result_number">181</span>개 보기</button>
 				</div>
 			</div>
-			<!-- 팝업: 로그인 및 회원가입 -->
+		</div>
+		<!-- 팝업: 로그인 및 회원가입 -->
+		<div class="popup_wrap loginSignUp">
 			<div class="popup loginSignUp">
 				<div class="popup_header">
 					<h1 class="popup_tit">로그인 또는 회원 가입</h1>
