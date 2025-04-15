@@ -77,3 +77,39 @@ $btnLoginSignUp.forEach((element) => {
 		popupAddActive($popupWrapLoginSignUp, $popupLoginSignUp);
 	});
 });
+
+//swiper
+//swiper : 메인 상단 탭메뉴
+const swiperMainTab = new Swiper(".main_tab_list_view", {
+	spaceBetween: 0,
+	slidesPerView: "auto",
+	freeMode: true,
+	navigation: {
+		nextEl: ".btn_main_tab_navi.swiper-button-next",
+		prevEl: ".btn_main_tab_navi.swiper-button-prev",
+	},
+});
+//swiper: 메인 컨텐츠 개별 슬라이드
+const swiperMainContent = new Swiper("#mainContentSlide01", {
+	spaceBetween: 0,
+	navigation: {
+		nextEl: ".main_content_item_navi .btn_prev",
+		prevEl: ".main_content_item_navi .btn_next",
+	},
+	pagination: {
+		el: ".main_content_item_pagination",
+		dynamicBullets: true,
+	},
+});
+//임시
+const swiperMainContent02 = new Swiper("#mainContentSlide02", {
+	spaceBetween: 0,
+	navigation: {
+		nextEl: ".main_content_item_navi .btn_prev",
+		prevEl: ".main_content_item_navi .btn_next",
+	},
+	pagination: {
+		el: ".main_content_item_pagination",
+		dynamicBullets: true,
+	},
+});
