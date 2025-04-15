@@ -4,7 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="./css/reset.css" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 		<link href="./css/common.css" rel="stylesheet" />
+
 		<title>클론 에어비엔비 - 신나현</title>
 	</head>
 	<body>
@@ -108,29 +110,33 @@
 			</header>
 			<main class="main">
 				<div class="main_tab_area">
-					<div class="main_tab_list_view">
-						<ul class="main_tab_menu_list">
-							<li class="tab_menu_item">
+					<div class="main_tab_list_view swiper-container">
+						<ul class="main_tab_menu_list swiper-wrapper">
+							<li class="tab_menu_item swiper-slide">
 								<div class="tab_menu_icon hanok"></div>
 								<div class="tab_menu_tit">한옥</div>
 							</li>
-							<li class="tab_menu_item selected">
+							<li class="tab_menu_item selected swiper-slide">
 								<div class="tab_menu_icon pool"></div>
 								<div class="tab_menu_tit">멋진 수영장</div>
 							</li>
-							<li class="tab_menu_item">
+							<li class="tab_menu_item swiper-slide">
 								<div class="tab_menu_icon coast"></div>
 								<div class="tab_menu_tit">해변 바로 앞</div>
 							</li>
-							<li class="tab_menu_item">
+							<li class="tab_menu_item swiper-slide">
 								<div class="tab_menu_icon creative"></div>
 								<div class="tab_menu_tit">창작 공간</div>
 							</li>
-							<li class="tab_menu_item">
+							<li class="tab_menu_item swiper-slide">
 								<div class="tab_menu_icon country"></div>
 								<div class="tab_menu_tit">한적한 시골</div>
 							</li>
 						</ul>
+						<div class="main_tab_navi_btns">
+							<div class="btn_main_tab_navi swiper_btn_navi swiper-button-prev"></div>
+							<div class="btn_main_tab_navi swiper_btn_navi swiper-button-next"></div>
+						</div>
 					</div>
 					<button class="btn_filter"><span class="icon_filter"></span>필터</button>
 				</div>
@@ -139,8 +145,13 @@
 						<li class="main_content_item">
 							<a href="" title="클릭시 상세페이지로 이동">
 								<div class="main_content_item_wrap">
-									<div class="main_content_tnumbnail_area">
-										<div class="main_content_item_images"><img src="./images/main_content_img_01.jpg" alt="숙소이미지_임시_1" /></div>
+									<div class="main_content_tnumbnail_area swiper-container" id="mainContentSlide01">
+										<div class="main_content_item_images swiper-wrapper">
+											<div class="main_content_img_item swiper-slide"><img src="./images/main_content_img_01.jpg" alt="숙소이미지_임시_1" /></div>
+											<div class="main_content_img_item swiper-slide"><img src="./images/main_content_img_02.jpg" alt="숙소이미지_임시_1" /></div>
+											<div class="main_content_img_item swiper-slide"><img src="./images/main_content_img_01.jpg" alt="숙소이미지_임시_1" /></div>
+											<div class="main_content_img_item swiper-slide"><img src="./images/main_content_img_02.jpg" alt="숙소이미지_임시_1" /></div>
+										</div>
 										<div class="main_content_item_buttons">
 											<div class="top">
 												<div class="guest_favorite">
@@ -150,8 +161,8 @@
 												<button class="btn_like"><span class="icon_heart"></span>좋아요</button>
 											</div>
 											<div class="main_content_item_navi">
-												<button class="btn_prev">이전</button>
-												<button class="btn_next">다음</button>
+												<button class="btn_main_content_navi btn_prev swiper_btn_navi swiper-button-next">이전</button>
+												<button class="btn_main_content_navi btn_next swiper_btn_navi swiper-button-prev">다음</button>
 											</div>
 											<div class="main_content_item_pagination"></div>
 										</div>
@@ -170,38 +181,13 @@
 						<li class="main_content_item">
 							<a href="" title="클릭시 상세페이지로 이동">
 								<div class="main_content_item_wrap">
-									<div class="main_content_tnumbnail_area">
-										<div class="main_content_item_images"><img src="./images/main_content_img_01.jpg" alt="숙소이미지_임시_1" /></div>
-										<div class="main_content_item_buttons">
-											<div class="top">
-												<div class="guest_favorite">
-													<div class="icon_trophy"></div>
-													게스트 선호
-												</div>
-												<button class="btn_like"><span class="icon_heart"></span>좋아요</button>
-											</div>
-											<div class="main_content_item_navi">
-												<button class="btn_prev">이전</button>
-												<button class="btn_next">다음</button>
-											</div>
-											<div class="main_content_item_pagination"></div>
+									<div class="main_content_tnumbnail_area swiper-container" id="mainContentSlide02">
+										<div class="main_content_item_images swiper-wrapper">
+											<div class="main_content_img_item swiper-slide"><img src="./images/main_content_img_01.jpg" alt="숙소이미지_임시_1" /></div>
+											<div class="main_content_img_item swiper-slide"><img src="./images/main_content_img_02.jpg" alt="숙소이미지_임시_1" /></div>
+											<div class="main_content_img_item swiper-slide"><img src="./images/main_content_img_01.jpg" alt="숙소이미지_임시_1" /></div>
+											<div class="main_content_img_item swiper-slide"><img src="./images/main_content_img_02.jpg" alt="숙소이미지_임시_1" /></div>
 										</div>
-									</div>
-									<dl class="main_content_thumbnail_info">
-										<dt class="item_element item_tit">한국 가평군</dt>
-										<dd class="item_element item_distance">44km거리</dd>
-										<dd class="item_element item_date">4월 20일 ~25일</dd>
-										<dd class="item_element item_price">₩395,766&#47;박</dd>
-										<dd class="item_element item_score">4.45</dd>
-									</dl>
-								</div>
-							</a>
-						</li>
-						<li class="main_content_item">
-							<a href="" title="클릭시 상세페이지로 이동">
-								<div class="main_content_item_wrap">
-									<div class="main_content_tnumbnail_area">
-										<div class="main_content_item_images"><img src="./images/main_content_img_01.jpg" alt="숙소이미지_임시_1" /></div>
 										<div class="main_content_item_buttons">
 											<div class="top">
 												<div class="guest_favorite">
@@ -211,158 +197,8 @@
 												<button class="btn_like"><span class="icon_heart"></span>좋아요</button>
 											</div>
 											<div class="main_content_item_navi">
-												<button class="btn_prev">이전</button>
-												<button class="btn_next">다음</button>
-											</div>
-											<div class="main_content_item_pagination"></div>
-										</div>
-									</div>
-									<dl class="main_content_thumbnail_info">
-										<dt class="item_element item_tit">한국 가평군</dt>
-										<dd class="item_element item_distance">44km거리</dd>
-										<dd class="item_element item_date">4월 20일 ~25일</dd>
-										<dd class="item_element item_price">₩395,766&#47;박</dd>
-										<dd class="item_element item_score">4.45</dd>
-									</dl>
-								</div>
-							</a>
-						</li>
-						<li class="main_content_item">
-							<a href="" title="클릭시 상세페이지로 이동">
-								<div class="main_content_item_wrap">
-									<div class="main_content_tnumbnail_area">
-										<div class="main_content_item_images"><img src="./images/main_content_img_01.jpg" alt="숙소이미지_임시_1" /></div>
-										<div class="main_content_item_buttons">
-											<div class="top">
-												<div class="guest_favorite">
-													<div class="icon_trophy"></div>
-													게스트 선호
-												</div>
-												<button class="btn_like"><span class="icon_heart"></span>좋아요</button>
-											</div>
-											<div class="main_content_item_navi">
-												<button class="btn_prev">이전</button>
-												<button class="btn_next">다음</button>
-											</div>
-											<div class="main_content_item_pagination"></div>
-										</div>
-									</div>
-									<dl class="main_content_thumbnail_info">
-										<dt class="item_element item_tit">한국 가평군</dt>
-										<dd class="item_element item_distance">44km거리</dd>
-										<dd class="item_element item_date">4월 20일 ~25일</dd>
-										<dd class="item_element item_price">₩395,766&#47;박</dd>
-										<dd class="item_element item_score">4.45</dd>
-									</dl>
-								</div>
-							</a>
-						</li>
-						<li class="main_content_item">
-							<a href="" title="클릭시 상세페이지로 이동">
-								<div class="main_content_item_wrap">
-									<div class="main_content_tnumbnail_area">
-										<div class="main_content_item_images"><img src="./images/main_content_img_01.jpg" alt="숙소이미지_임시_1" /></div>
-										<div class="main_content_item_buttons">
-											<div class="top">
-												<div class="guest_favorite">
-													<div class="icon_trophy"></div>
-													게스트 선호
-												</div>
-												<button class="btn_like"><span class="icon_heart"></span>좋아요</button>
-											</div>
-											<div class="main_content_item_navi">
-												<button class="btn_prev">이전</button>
-												<button class="btn_next">다음</button>
-											</div>
-											<div class="main_content_item_pagination"></div>
-										</div>
-									</div>
-									<dl class="main_content_thumbnail_info">
-										<dt class="item_element item_tit">한국 가평군</dt>
-										<dd class="item_element item_distance">44km거리</dd>
-										<dd class="item_element item_date">4월 20일 ~25일</dd>
-										<dd class="item_element item_price">₩395,766&#47;박</dd>
-										<dd class="item_element item_score">4.45</dd>
-									</dl>
-								</div>
-							</a>
-						</li>
-						<li class="main_content_item">
-							<a href="" title="클릭시 상세페이지로 이동">
-								<div class="main_content_item_wrap">
-									<div class="main_content_tnumbnail_area">
-										<div class="main_content_item_images"><img src="./images/main_content_img_01.jpg" alt="숙소이미지_임시_1" /></div>
-										<div class="main_content_item_buttons">
-											<div class="top">
-												<div class="guest_favorite">
-													<div class="icon_trophy"></div>
-													게스트 선호
-												</div>
-												<button class="btn_like"><span class="icon_heart"></span>좋아요</button>
-											</div>
-											<div class="main_content_item_navi">
-												<button class="btn_prev">이전</button>
-												<button class="btn_next">다음</button>
-											</div>
-											<div class="main_content_item_pagination"></div>
-										</div>
-									</div>
-									<dl class="main_content_thumbnail_info">
-										<dt class="item_element item_tit">한국 가평군</dt>
-										<dd class="item_element item_distance">44km거리</dd>
-										<dd class="item_element item_date">4월 20일 ~25일</dd>
-										<dd class="item_element item_price">₩395,766&#47;박</dd>
-										<dd class="item_element item_score">4.45</dd>
-									</dl>
-								</div>
-							</a>
-						</li>
-						<li class="main_content_item">
-							<a href="" title="클릭시 상세페이지로 이동">
-								<div class="main_content_item_wrap">
-									<div class="main_content_tnumbnail_area">
-										<div class="main_content_item_images"><img src="./images/main_content_img_01.jpg" alt="숙소이미지_임시_1" /></div>
-										<div class="main_content_item_buttons">
-											<div class="top">
-												<div class="guest_favorite">
-													<div class="icon_trophy"></div>
-													게스트 선호
-												</div>
-												<button class="btn_like"><span class="icon_heart"></span>좋아요</button>
-											</div>
-											<div class="main_content_item_navi">
-												<button class="btn_prev">이전</button>
-												<button class="btn_next">다음</button>
-											</div>
-											<div class="main_content_item_pagination"></div>
-										</div>
-									</div>
-									<dl class="main_content_thumbnail_info">
-										<dt class="item_element item_tit">한국 가평군</dt>
-										<dd class="item_element item_distance">44km거리</dd>
-										<dd class="item_element item_date">4월 20일 ~25일</dd>
-										<dd class="item_element item_price">₩395,766&#47;박</dd>
-										<dd class="item_element item_score">4.45</dd>
-									</dl>
-								</div>
-							</a>
-						</li>
-						<li class="main_content_item">
-							<a href="" title="클릭시 상세페이지로 이동">
-								<div class="main_content_item_wrap">
-									<div class="main_content_tnumbnail_area">
-										<div class="main_content_item_images"><img src="./images/main_content_img_01.jpg" alt="숙소이미지_임시_1" /></div>
-										<div class="main_content_item_buttons">
-											<div class="top">
-												<div class="guest_favorite">
-													<div class="icon_trophy"></div>
-													게스트 선호
-												</div>
-												<button class="btn_like"><span class="icon_heart"></span>좋아요</button>
-											</div>
-											<div class="main_content_item_navi">
-												<button class="btn_prev">이전</button>
-												<button class="btn_next">다음</button>
+												<button class="btn_main_content_navi btn_prev swiper_btn_navi swiper-button-next">이전</button>
+												<button class="btn_main_content_navi btn_next swiper_btn_navi swiper-button-prev">다음</button>
 											</div>
 											<div class="main_content_item_pagination"></div>
 										</div>
@@ -911,6 +747,7 @@
 			</div>
 		</div>
 		<!-- end: popup_wrap -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script type="text/javascript" src="./js/index.js"></script>
 	</body>
 </html>
