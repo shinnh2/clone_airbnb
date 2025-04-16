@@ -1212,6 +1212,15 @@ button {
 	background-position: -72px -162px;
 	font-size: 0;
 }
+.popup_fold_body {
+	display: none;
+}
+.popup_fold.fold .popup_fold_body {
+	display: block;
+}
+.popup_fold.fold .btn_fold_toggle {
+	transform: rotate(180deg);
+}
 .fold_checklist_wrap {
 	margin-bottom: 24px;
 }
