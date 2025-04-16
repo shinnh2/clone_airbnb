@@ -16,6 +16,7 @@ const $popupFilter = document.querySelector(".popup.filter"); //팝업창: 필�
 const $popupWrapLoginSignUp = document.querySelector(".popup_wrap.loginSignUp"); //팝업: 로그인 회원가입
 const $popupLoginSignUp = document.querySelector(".popup.loginSignUp"); //팝업창: 로그인 회원가입
 const $popupBtnClose = document.querySelectorAll(".popup .btn_close"); //팝업: 닫기 버튼
+const $btnFoldToggle = document.querySelectorAll(".btn_fold_toggle");
 
 //스크롤 이벤트
 window.addEventListener("scroll", () => {
@@ -112,4 +113,12 @@ const swiperMainContent02 = new Swiper("#mainContentSlide02", {
 		el: ".main_content_item_pagination",
 		dynamicBullets: true,
 	},
+});
+
+//접기 펼치기 기능
+$btnFoldToggle.forEach((element) => {
+	element.addEventListener("click", () => {
+		const $closestParentFold = element.closest(".popup_fold");
+		$closestParentFold.classList.toggle("fold");
+	});
 });
