@@ -27,7 +27,7 @@
 						</a>
 					</h1>
 					<div class="user_area">
-						<a href="#none" class="link_goto_start" title="에어비엔비 스타트 페이지로 이동">당신의 공간을 에어비앤비하세요</a>
+						<a href="https://www.airbnb.co.kr/host/homes" class="link_goto_start" title="에어비엔비 스타트 페이지로 이동">당신의 공간을 에어비앤비하세요</a>
 						<button class="btn_translate">언어 변경</button>
 						<div class="user_menu_area">
 							<button class="btn_user">
@@ -63,24 +63,24 @@
 						<div class="search_content big">
 							<div class="search_item">
 								<div class="search_item_tit">여행지</div>
-								<div class="search_item_desc">여행지 검색</div>
+								<div class="search_item_desc"><input type="text" id="searchTravelPlace" class="search_item_input" placeholder="여행지 검색" /></div>
 							</div>
 							<hr class="line_vertical" />
 							<div class="search_item_group">
 								<div class="search_item">
 									<div class="search_item_tit">체크인</div>
-									<div class="search_item_desc">날짜 추가</div>
+									<button class="search_item_desc btn_date_checkin">날짜 추가</button>
 								</div>
 								<hr class="line_vertical" />
 								<div class="search_item">
 									<div class="search_item_tit">체크아웃</div>
-									<div class="search_item_desc">날짜 추가</div>
+									<button class="search_item_desc btn_date_checkout">날짜 추가</button>
 								</div>
 							</div>
 							<hr class="line_vertical" />
 							<div class="search_item">
 								<div class="search_item_tit">여행자</div>
-								<div class="search_item_desc">게스트 추가</div>
+								<button class="search_item_desc btn_add_guest">게스트 추가</button>
 							</div>
 							<button class="btn_search">
 								<span class="icon_search"></span>
@@ -178,7 +178,7 @@
 							</a>
 						</li>
 						<!-- 임시 구분선 -->
-						<li class="main_content_item">
+						<!-- <li class="main_content_item">
 							<a href="" title="클릭시 상세페이지로 이동">
 								<div class="main_content_item_wrap">
 									<div class="main_content_tnumbnail_area swiper-container" id="mainContentSlide02">
@@ -212,7 +212,7 @@
 									</dl>
 								</div>
 							</a>
-						</li>
+						</li> -->
 						<!-- 임시 구분선 end -->
 					</ul>
 					<div class="view_more">
@@ -336,6 +336,15 @@
 					</div>
 				</div>
 			</footer>
+			<button class="btn_float_map">
+				<span>지도 표시하기</span>
+				<span class="icon_map">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 16px; width: 16px; fill: var(--linaria-theme_palette-white)">
+						<path
+							d="M31.25 3.75a2.29 2.29 0 0 0-1.01-1.44A2.29 2.29 0 0 0 28.5 2L21 3.67l-10-2L2.5 3.56A2.29 2.29 0 0 0 .7 5.8v21.95a2.28 2.28 0 0 0 1.06 1.94A2.29 2.29 0 0 0 3.5 30L11 28.33l10 2 8.49-1.89a2.29 2.29 0 0 0 1.8-2.24V4.25a2.3 2.3 0 0 0-.06-.5zM12.5 25.98l-1.51-.3L9.5 26H9.5V4.66l1.51-.33 1.49.3v21.34zm10 1.36-1.51.33-1.49-.3V6.02l1.51.3L22.5 6h.01v21.34z"></path>
+					</svg>
+				</span>
+			</button>
 		</div>
 		<!-- end: page_wrap -->
 
@@ -748,6 +757,8 @@
 		</div>
 		<!-- end: popup_wrap -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<!-- <script type="text/javascript" src="./js/index.js"></script> -->
+		<script type="text/javascript" src="./js/mockData.js"></script>
 		<script type="text/javascript" src="./js/index.js"></script>
 	</body>
 </html>
