@@ -47,6 +47,14 @@ button {
 	background: none;
 	cursor: pointer;
 }
+input {
+	font-family: var(--font-family);
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-size: var(--fs-normal);
+	font-weight: var(--fw-normal);
+	color: var(--main-color);
+}
 
 /* ----------------------- common ----------------------- */
 .tab_menu {
@@ -253,6 +261,7 @@ button {
 }
 /* header - search_area */
 .search_wrap {
+	position: relative;
 	width: 848px;
 	height: 65px;
 	margin: 0 auto;
@@ -262,6 +271,7 @@ button {
 	box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
 	overflow: hidden;
 	transition: all 250ms cubic-bezier(0.2, 0, 0, 1);
+	z-index: 2;
 }
 .search_content {
 	width: 100%;
@@ -275,6 +285,8 @@ button {
 .search_content.small .search_item {
 	flex: none;
 	padding: 0 16px;
+	display: flex;
+	align-items: center;
 }
 .search_content.small .btn_search {
 	width: 32px;
@@ -285,10 +297,46 @@ button {
 	display: flex;
 	align-items: center;
 	flex: 1;
+	height: 100%;
+	box-sizing: border-box;
 }
 .search_item {
-	padding: 14px 24px;
+	position: relative;
 	flex: 1;
+	height: 100%;
+	padding: 14px 24px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	justify-content: center;
+}
+.search_content.big .search_item:hover {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	/* border: 1px solid #fff; */
+	background: #ebebeb;
+	border-radius: 32px;
+}
+.search_content.big .search_item:hover::before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: -1px;
+	top: 0;
+	height: 100%;
+	border: 1px solid #fff;
+}
+.search_content.big .search_item:hover::after {
+	content: "";
+	display: block;
+	right: -1px;
+	top: 0;
+	height: 100%;
+	position: absolute;
+	border: 1px solid #fff;
+	z-index: 0;
 }
 .search_item_tit {
 	font-size: var(--fs-caption);
@@ -297,6 +345,16 @@ button {
 	margin-bottom: 2px;
 }
 .search_item_desc {
+	padding: 0;
+	font-weight: var(--fw-medium);
+	color: var(--sub-color);
+}
+.search_item_input {
+	padding: 0;
+	border: 0 none;
+	background: none;
+}
+.search_item_input::placeholder {
 	font-weight: var(--fw-medium);
 	color: var(--sub-color);
 }
@@ -308,9 +366,11 @@ button {
 	background: var(--border-color);
 }
 .btn_search {
+	position: absolute;
+	right: 9px;
 	width: 48px;
 	height: 48px;
-	margin-right: 9px;
+	/* margin-right: 9px; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -351,6 +411,7 @@ button {
 }
 .header.fixed .search_content.small {
 	display: flex;
+	padding-right: 32px;
 }
 /* ----------------------- main ----------------------- */
 /* main - tab */
@@ -472,6 +533,7 @@ button {
 	grid-template-columns: var(--breakpoint-grid_column-template, repeat(var(--breakpoint-grid_columns, 1), minmax(0, 1fr)));
 	--breakpoint-grid_columns: 5;
 	gap: 40px 24px;
+	/* min-height: 1400px;  */
 }
 /* main - content : main_content_tnumbnail_area */
 .main_content_tnumbnail_area {
@@ -513,12 +575,8 @@ button {
 	flex: 1;
 }
 .main_content_item_pagination.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-	flex: 1;
 	transform: none;
 	margin: 0 auto;
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
 }
 .main_content_item_pagination.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
 	width: 6px;
@@ -568,6 +626,9 @@ button {
 	background-image: url("./../images/sprite.png");
 	background-repeat: no-repeat;
 	background-position: -62px -80px;
+}
+.icon_heart.active {
+	background-position: -38px -80px;
 }
 
 /* main - content : main_content_thumbnail_info */
@@ -753,7 +814,30 @@ button {
 	font-weight: var(--fw-medium);
 	color: var(--sub-color);
 }
-
+.btn_float_map {
+	position: fixed;
+	left: 50%;
+	bottom: 40px;
+	transform: translate(-50%, 0px);
+	display: flex;
+	align-items: center;
+	padding: 14px 19px;
+	border-radius: 48px;
+	background: var(--main-color);
+	font-weight: var(--fw-medium);
+	color: var(--white);
+	z-index: 10;
+	transition: all 0.14s;
+	opacity: 1;
+}
+.btn_float_map .icon_map {
+	fill: currentColor;
+	margin-left: 8px;
+}
+.btn_float_map.disappear {
+	opacity: 0;
+	pointer-events: none;
+}
 /* ----------------------- popup ----------------------- */
 /* popup common */
 .popup_wrap {
