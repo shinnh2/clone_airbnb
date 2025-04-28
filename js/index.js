@@ -16,7 +16,8 @@ const $popupFilter = document.querySelector(".popup.filter"); //팝업창: 필�
 const $popupWrapLoginSignUp = document.querySelector(".popup_wrap.loginSignUp"); //팝업: 로그인 회원가입
 const $popupLoginSignUp = document.querySelector(".popup.loginSignUp"); //팝업창: 로그인 회원가입
 const $popupBtnClose = document.querySelectorAll(".popup .btn_close"); //팝업: 닫기 버튼
-const $btnFoldToggle = document.querySelectorAll(".btn_fold_toggle");
+const $btnFoldToggle = document.querySelectorAll(".btn_fold_toggle"); //접기 펼치기 토글 버튼
+const $btnFloatMap = document.querySelector(".btn_float_map"); //지도 표시하기 플로트 버튼
 
 //스크롤 이벤트
 window.addEventListener("scroll", () => {
@@ -27,6 +28,12 @@ window.addEventListener("scroll", () => {
 	} else {
 		$header.classList.remove("fixed");
 		$mainTab.classList.remove("fixed");
+	}
+	const viewMoreTop = document.querySelector(".view_more").offsetTop;
+	if (scrollPosition > viewMoreTop - window.innerHeight) {
+		$btnFloatMap.classList.add("disappear");
+	} else {
+		$btnFloatMap.classList.remove("disappear");
 	}
 });
 
@@ -91,28 +98,63 @@ const swiperMainTab = new Swiper(".main_tab_list_view", {
 	},
 });
 //swiper: 메인 컨텐츠 개별 슬라이드
-const swiperMainContent = new Swiper("#mainContentSlide01", {
-	spaceBetween: 0,
-	navigation: {
-		nextEl: ".main_content_item_navi .btn_prev",
-		prevEl: ".main_content_item_navi .btn_next",
-	},
-	pagination: {
-		el: ".main_content_item_pagination",
-		dynamicBullets: true,
-	},
+let slideTagIds = [];
+let mainContentItem = "";
+mockData.forEach((el) => {
+	let swiperSlideImgTag = "";
+	el.images.forEach((el) => {
+		swiperSlideImgTag += `<div class="main_content_img_item swiper-slide"><img src="${el}" alt="숙소이미지" /></div>`;
+	});
+	slideTagIds.push(`mainContentSlide${el.id}`);
+	const mainContentTemplate = `						
+	<li class="main_content_item">
+		<a href="${el.url}" title="클릭시 상세페이지로 이동">
+			<div class="main_content_item_wrap">
+				<div class="main_content_tnumbnail_area swiper-container" id="mainContentSlide${el.id}">
+					<div class="main_content_item_images swiper-wrapper">
+						${swiperSlideImgTag}
+					</div>
+					<div class="main_content_item_buttons">
+						<div class="top">
+							<div class="guest_favorite">
+								<div class="icon_trophy"></div>
+								게스트 선호
+							</div>
+							<button class="btn_like"><span class="icon_heart"></span>좋아요</button>
+						</div>
+						<div class="main_content_item_navi">
+							<button class="btn_main_content_navi btn_prev swiper_btn_navi swiper-button-next">이전</button>
+							<button class="btn_main_content_navi btn_next swiper_btn_navi swiper-button-prev">다음</button>
+						</div>
+						<div class="main_content_item_pagination"></div>
+					</div>
+				</div>
+				<dl class="main_content_thumbnail_info">
+					<dt class="item_element item_tit">${el.name}</dt>
+					<dd class="item_element item_distance">${el.city}</dd>
+					<dd class="item_element item_date">4월 20일 ~25일</dd>
+					<dd class="item_element item_price">${el.price.currency} ${el.price.total}&#47;박</dd>
+					<dd class="item_element item_score">${el.rating}</dd>
+				</dl>
+			</div>
+		</a>
+	</li>`;
+	mainContentItem += mainContentTemplate;
 });
-//임시
-const swiperMainContent02 = new Swiper("#mainContentSlide02", {
-	spaceBetween: 0,
-	navigation: {
-		nextEl: ".main_content_item_navi .btn_prev",
-		prevEl: ".main_content_item_navi .btn_next",
-	},
-	pagination: {
-		el: ".main_content_item_pagination",
-		dynamicBullets: true,
-	},
+document.querySelector(".main_contents_list").innerHTML = mainContentItem;
+console.log(slideTagIds);
+slideTagIds.forEach((el) => {
+	window[`swiperMainContent${el}`] = new Swiper(`#${el}`, {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".main_content_item_navi .btn_prev",
+			prevEl: ".main_content_item_navi .btn_next",
+		},
+		pagination: {
+			el: ".main_content_item_pagination",
+			dynamicBullets: true,
+		},
+	});
 });
 
 //접기 펼치기 기능
